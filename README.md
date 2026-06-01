@@ -13,7 +13,7 @@ A creative collective. Single-page site.
 - Type: **Aglet Mono** (Adobe Fonts / Typekit)
 - Hosting: GitHub Pages
 
-## 만든 사람
+## Contributor
 
 **김동일 (Dongil Kim)**
 
