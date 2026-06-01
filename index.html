@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>THE UNNECESSARY COLLECTIVE</title>
+<meta name="description" content="The Unnecessary Collective is a creative collective. We make the unnecessary, necessary." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="THE UNNECESSARY COLLECTIVE" />
+<meta property="og:description" content="Why not the unnecessary? We make the unnecessary, necessary." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://theunnecessarycollective.com" />
+<meta property="og:image" content="https://theunnecessarycollective.com/logo-theunnecessarycollective-og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="THE UNNECESSARY COLLECTIVE" />
+<meta name="twitter:description" content="Why not the unnecessary? We make the unnecessary, necessary." />
+<meta name="twitter:image" content="https://theunnecessarycollective.com/logo-theunnecessarycollective-og.png" />
+
+<!-- Font: Aglet Mono (Adobe Fonts / Typekit) -->
+<link rel="stylesheet" href="https://use.typekit.net/ngq5npz.css" />
+
+<style>
+  :root {
+    --snow: #fcfcfc;
+    --basalt: #121212;
+    --concrete-dark: #707070; /* Snow 위 4.72:1 (WCAG AA) */
+    --mono: 'aglet-mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    background: var(--snow);
+    color: var(--basalt);
+    font-family: var(--mono);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+  }
+
+  /* ---- Corner anchor: top-left block, bottom-right footer ---- */
+  main {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;     /* block: anchored left */
+    justify-content: flex-start; /* block: anchored top */
+    padding: clamp(4rem, 16vh, 11rem) clamp(1.5rem, 5vw, 5rem) 2rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;        /* text stays left-aligned inside block */
+    gap: clamp(2rem, 5.5vh, 3.5rem);
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .wordmark {
+    font-family: var(--mono);
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.28;       /* logo spec: 128% */
+    letter-spacing: 0.24em;  /* logo spec: 24% */
+    font-size: clamp(1.6rem, 1.02rem + 2.48vw, 3rem);
+  }
+
+  .declaration {
+    font-family: var(--mono);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(0.75rem, 0.646rem + 0.44vw, 1rem);
+    letter-spacing: 0.24em;  /* logo spec: 24% */
+    line-height: 1.9;        /* base 128% + breathing room for 2 lines */
+    max-width: 52ch;
+  }
+
+  /* ---- Footer contact ---- */
+  footer {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: clamp(0.75rem, 0.646rem + 0.44vw, 1rem);
+    letter-spacing: 0.24em;  /* logo spec: 24% */
+    text-transform: uppercase;
+    color: var(--concrete-dark);
+    text-align: right;
+    padding: 2rem clamp(1.5rem, 5vw, 5rem) calc(3.5vh + env(safe-area-inset-bottom));
+  }
+
+  footer a {
+    color: var(--concrete-dark);
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+  footer a:hover { color: var(--basalt); }
+
+  /* ---- Quiet entrance ---- */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0;
+    animation: rise 1.4s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  .d1 { animation-delay: 0.15s; }
+  .d2 { animation-delay: 0.65s; }
+  .d3 { animation-delay: 1.15s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; }
+  }
+
+  /* Narrow screens: stack everything top-left, ease slogan tracking */
+  @media (max-width: 480px) {
+    .declaration { letter-spacing: 0.1em; line-height: 1.85; }
+    footer { text-align: left; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="content">
+      <h1 class="wordmark reveal d1">THE<br />UNNECESSARY<br />COLLECTIVE</h1>
+
+      <p class="declaration reveal d2">
+        Why not the unnecessary?<br />We make the unnecessary, necessary.
+      </p>
+    </div>
+  </main>
+
+  <footer class="reveal d3">
+    <a href="https://instagram.com/theunnecessarycollective" target="_blank" rel="noopener">@theunnecessarycollective</a>
+  </footer>
+</body>
+</html>
